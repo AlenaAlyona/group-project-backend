@@ -22,7 +22,9 @@ createConnection()
           route
             .action(request, response)
             .then(() => next)
-            .catch((err) => next(err));
+            .catch((err) =>
+              response.status(400).send({ message: err.message })
+            );
         }
       );
     });

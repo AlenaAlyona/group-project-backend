@@ -1,5 +1,5 @@
 import { GetAllExperience } from "./controllers/GetAllExperience";
-// import { postGetByIdAction } from "./controllers/PostGetByIdAction";
+import { createGraduate } from "./controllers/CreateGraduate";
 // import { postSaveAction } from "./controllers/PostSaveAction";
 
 /**
@@ -11,11 +11,11 @@ export const AppRoutes = [
     method: "get",
     action: GetAllExperience,
   },
-  // {
-  //   path: "/posts/:id",
-  //   method: "get",
-  //   action: postGetByIdAction,
-  // },
+  {
+    path: "/signup",
+    method: "post",
+    action: createGraduate,
+  },
   // {
   //   path: "/posts",
   //   method: "post",

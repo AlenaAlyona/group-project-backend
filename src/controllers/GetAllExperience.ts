@@ -13,5 +13,5 @@ export async function GetAllExperience(request: Request, response: Response) {
   const experiences = await expRepository.find();
 
   // return loaded experiences
-  response.send(experiences);
+  return response.send(experiences);
 }
