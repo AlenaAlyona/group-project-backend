@@ -15,25 +15,28 @@ export class Graduate {
   password: string;
 
   @Column()
-  education: string;
-
-  @Column()
   language: string;
 
   @Column()
-  monthsToJob: number;
+  education: string;
 
   @Column()
   interviews: string;
 
   @Column()
+  monthsToJob: number;
+
+  @Column()
   jobType: string;
 
   @Column()
-  companySize: string;
+  industry: string;
 
   @Column()
-  industry: string;
+  companyLang: string;
+
+  @Column()
+  companySize: string;
 
   @Column()
   techStack: string;
