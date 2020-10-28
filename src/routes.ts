@@ -10,7 +10,7 @@ export const AppRoutes = [
   {
     path: "/",
     method: "get",
-    action: GetAllExperience,
+    action: GetAllGraduates,
   },
   {
     path: "/signup",

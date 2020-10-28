@@ -6,8 +6,47 @@ import { Graduate } from "../entity/Graduate";
  * Saves given graduate.
  */
 export async function createGraduate(request: Request, response: Response) {
-  const { fullName, email, password } = request.body;
-  if (!fullName || !email || !password) {
+  const {
+    fullName,
+    email,
+    password,
+    education,
+    language,
+    monthsToJob,
+    interviews,
+    jobType,
+    companySize,
+    industry,
+    techStack,
+    answer1,
+    answer2,
+    answer3,
+    answer4,
+    answer5,
+    answer6,
+    answer7,
+  } = request.body;
+
+  if (
+    !fullName ||
+    !email ||
+    !password ||
+    !education ||
+    !language ||
+    !monthsToJob ||
+    !interviews ||
+    !jobType ||
+    !companySize ||
+    !industry ||
+    !techStack ||
+    !answer1 ||
+    !answer2 ||
+    !answer3 ||
+    !answer4 ||
+    !answer5 ||
+    !answer6 ||
+    !answer7
+  ) {
     return response
       .status(400)
       .send({ message: "Please provide all the information" });
@@ -21,6 +60,21 @@ export async function createGraduate(request: Request, response: Response) {
       fullName,
       email,
       password,
+      education,
+      language,
+      monthsToJob,
+      interviews,
+      jobType,
+      companySize,
+      industry,
+      techStack,
+      answer1,
+      answer2,
+      answer3,
+      answer4,
+      answer5,
+      answer6,
+      answer7,
     });
 
     console.log("NEW GRADUATE", newgraduate);
