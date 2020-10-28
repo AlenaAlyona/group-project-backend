@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { getManager } from "typeorm";
 import { Graduate } from "../entity/Graduate";
-import * as bcrypt from "bcrypt";
 import * as jwt from "jsonwebtoken";
 
 export async function Login(request: Request, response: Response) {
@@ -19,16 +18,20 @@ export async function Login(request: Request, response: Response) {
 
     const user = await graduateRepository.findOne({ where: { email } });
 
-    if (!user || !bcrypt.compareSync(password, user.password)) {
+    if (!user) {
       return response.status(400).send({
         message: "User with that email not found or password incorrect",
       });
     }
 
     // to do: generate jwtSecret and add to .env  then replace string below
-    const token = jwt.sign(user, "AOIDJFIWEJR9138719283U1J2I3N1O2%$!&%@", {
-      expiresIn: "2h",
-    });
+    const token = jwt.sign(
+      JSON.parse(JSON.stringify(user)),
+      "AOIDJFIWEJR9138719283U1J2I3N1O2%$!&%@",
+      {
+        expiresIn: "2h",
+      }
+    );
 
     return response.status(200).send({ token, user });
   } catch (e) {
