@@ -1,4 +1,4 @@
-import { GetAllExperience } from "./controllers/GetAllExperience";
+import { GetAllGraduates } from "./controllers/GetAllGraduates";
 import { createGraduate } from "./controllers/CreateGraduate";
 // import { postSaveAction } from "./controllers/PostSaveAction";
 
@@ -9,7 +9,7 @@ export const AppRoutes = [
   {
     path: "/",
     method: "get",
-    action: GetAllExperience,
+    action: GetAllGraduates,
   },
   {
     path: "/signup",
