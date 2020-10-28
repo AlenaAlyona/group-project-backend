@@ -2,51 +2,10 @@ import { Request, Response } from "express";
 import { getManager } from "typeorm";
 import { Graduate } from "../entity/Graduate";
 
-/**
- * Saves given graduate.
- */
 export async function createGraduate(request: Request, response: Response) {
-  const {
-    fullName,
-    email,
-    password,
-    education,
-    language,
-    monthsToJob,
-    interviews,
-    jobType,
-    companySize,
-    industry,
-    techStack,
-    answer1,
-    answer2,
-    answer3,
-    answer4,
-    answer5,
-    answer6,
-    answer7,
-  } = request.body;
+  const { fullName, email, password } = request.body;
 
-  if (
-    !fullName ||
-    !email ||
-    !password ||
-    !education ||
-    !language ||
-    !monthsToJob ||
-    !interviews ||
-    !jobType ||
-    !companySize ||
-    !industry ||
-    !techStack ||
-    !answer1 ||
-    !answer2 ||
-    !answer3 ||
-    !answer4 ||
-    !answer5 ||
-    !answer6 ||
-    !answer7
-  ) {
+  if (!fullName || !email || !password) {
     return response
       .status(400)
       .send({ message: "Please provide all the information" });
@@ -60,21 +19,6 @@ export async function createGraduate(request: Request, response: Response) {
       fullName,
       email,
       password,
-      education,
-      language,
-      monthsToJob,
-      interviews,
-      jobType,
-      companySize,
-      industry,
-      techStack,
-      answer1,
-      answer2,
-      answer3,
-      answer4,
-      answer5,
-      answer6,
-      answer7,
     });
 
     console.log("NEW GRADUATE", newgraduate);

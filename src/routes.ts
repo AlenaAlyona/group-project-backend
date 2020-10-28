@@ -1,6 +1,7 @@
-import { GetAllGraduates } from "./controllers/GetAllGraduates"
-import { createGraduate } from "./controllers/CreateGraduate"
-import { Login } from "./controllers/Login"
+import { GetAllGraduates } from "./controllers/GetAllGraduates";
+import { createGraduate } from "./controllers/CreateGraduate";
+import { Login } from "./controllers/Login";
+
 // import { postSaveAction } from "./controllers/PostSaveAction";
 
 /**
@@ -27,4 +28,4 @@ export const AppRoutes = [
   //   method: "post",
   //   action: postSaveAction,
   // },
-]
+];
