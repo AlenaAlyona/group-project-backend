@@ -7,13 +7,14 @@ export async function createGraduate(request: Request, response: Response) {
     fullName,
     email,
     password,
-    education,
     language,
-    monthsToJob,
+    education,
     interviews,
+    monthsToJob,
     jobType,
-    companySize,
     industry,
+    companyLang,
+    companySize,
     techStack,
     answer1,
     answer2,
@@ -28,13 +29,14 @@ export async function createGraduate(request: Request, response: Response) {
     !fullName ||
     !email ||
     !password ||
-    !education ||
     !language ||
-    !monthsToJob ||
+    !education ||
     !interviews ||
+    !monthsToJob ||
     !jobType ||
-    !companySize ||
     !industry ||
+    !companyLang ||
+    !companySize ||
     !techStack ||
     !answer1 ||
     !answer2 ||
@@ -62,8 +64,9 @@ export async function createGraduate(request: Request, response: Response) {
       monthsToJob,
       interviews,
       jobType,
-      companySize,
       industry,
+      companyLang,
+      companySize,
       techStack,
       answer1,
       answer2,
