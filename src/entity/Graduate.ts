@@ -1,61 +1,61 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
 @Entity()
 export class Graduate {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
-  fullName: string;
+  fullName: string
 
   @Column()
-  email: string;
+  email: string
 
   @Column()
-  password: string;
+  password: string
 
-  @Column()
-  education: string;
+  // @Column()
+  // education: string;
 
-  @Column()
-  language: string;
+  // @Column()
+  // language: string;
 
-  @Column()
-  monthsToJob: number;
+  // @Column()
+  // monthsToJob: number;
 
-  @Column()
-  interviews: string;
+  // @Column()
+  // interviews: string;
 
-  @Column()
-  jobType: string;
+  // @Column()
+  // jobType: string;
 
-  @Column()
-  companySize: string;
+  // @Column()
+  // companySize: string;
 
-  @Column()
-  industry: string;
+  // @Column()
+  // industry: string;
 
-  @Column()
-  techStack: string;
+  // @Column()
+  // techStack: string;
 
-  @Column()
-  answer1: string;
+  // @Column()
+  // answer1: string;
 
-  @Column()
-  answer2: string;
+  // @Column()
+  // answer2: string;
 
-  @Column()
-  answer3: string;
+  // @Column()
+  // answer3: string;
 
-  @Column()
-  answer4: string;
+  // @Column()
+  // answer4: string;
 
-  @Column()
-  answer5: string;
+  // @Column()
+  // answer5: string;
 
-  @Column()
-  answer6: string;
+  // @Column()
+  // answer6: string;
 
-  @Column()
-  answer7: string;
+  // @Column()
+  // answer7: string;
 }
