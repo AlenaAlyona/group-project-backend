@@ -7,13 +7,14 @@ export async function createGraduate(request: Request, response: Response) {
     fullName,
     email,
     password,
-    education,
     language,
-    monthsToJob,
+    education,
     interviews,
+    monthsToJob,
     jobType,
-    companySize,
     industry,
+    companyLang,
+    companySize,
     techStack,
     answer1,
     answer2,
@@ -27,22 +28,23 @@ export async function createGraduate(request: Request, response: Response) {
   if (
     !fullName ||
     !email ||
-    !password //||
-    // !education ||
-    // !language ||
-    // !monthsToJob ||
-    // !interviews ||
-    // !jobType ||
-    // !companySize ||
-    // !industry ||
-    // !techStack ||
-    // !answer1 ||
-    // !answer2 ||
-    // !answer3 ||
-    // !answer4 ||
-    // !answer5 ||
-    // !answer6 ||
-    // !answer7
+    !password ||
+    !language ||
+    !education ||
+    !interviews ||
+    !monthsToJob ||
+    !jobType ||
+    !industry ||
+    !companyLang ||
+    !companySize ||
+    !techStack ||
+    !answer1 ||
+    !answer2 ||
+    !answer3 ||
+    !answer4 ||
+    !answer5 ||
+    !answer6 ||
+    !answer7
   ) {
     return response
       .status(400)
@@ -57,23 +59,23 @@ export async function createGraduate(request: Request, response: Response) {
       fullName,
       email,
       password,
-      // education,
-      // language,
-      // monthsToJob,
-      // interviews,
-      // jobType,
-      // companySize,
-      // industry,
-      // techStack,
-      // answer1,
-      // answer2,
-      // answer3,
-      // answer4,
-      // answer5,
-      // answer6,
-      // answer7,
-    })
-
+      education,
+      language,
+      monthsToJob,
+      interviews,
+      jobType,
+      industry,
+      companyLang,
+      companySize,
+      techStack,
+      answer1,
+      answer2,
+      answer3,
+      answer4,
+      answer5,
+      answer6,
+      answer7,
+    });
     console.log("NEW GRADUATE", newgraduate)
     // delete newgraduate.password
 

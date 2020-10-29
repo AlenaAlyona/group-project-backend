@@ -14,48 +14,51 @@ export class Graduate {
   @Column()
   password: string
 
-  // @Column()
-  // education: string;
+  @Column()
+  language: string;
 
-  // @Column()
-  // language: string;
+  @Column()
+  education: string;
 
-  // @Column()
-  // monthsToJob: number;
+  @Column()
+  interviews: string;
 
-  // @Column()
-  // interviews: string;
+  @Column()
+  monthsToJob: number;
 
-  // @Column()
-  // jobType: string;
+  @Column()
+  jobType: string;
 
-  // @Column()
-  // companySize: string;
+  @Column()
+  industry: string;
 
-  // @Column()
-  // industry: string;
+  @Column()
+  companyLang: string;
 
-  // @Column()
-  // techStack: string;
+  @Column()
+  companySize: string;
 
-  // @Column()
-  // answer1: string;
+  @Column()
+  techStack: string;
 
-  // @Column()
-  // answer2: string;
+  @Column()
+  answer1: string;
 
-  // @Column()
-  // answer3: string;
+  @Column()
+  answer2: string;
 
-  // @Column()
-  // answer4: string;
+  @Column()
+  answer3: string;
 
-  // @Column()
-  // answer5: string;
+  @Column()
+  answer4: string;
 
-  // @Column()
-  // answer6: string;
+  @Column()
+  answer5: string;
 
-  // @Column()
-  // answer7: string;
+  @Column()
+  answer6: string;
+
+  @Column()
+  answer7: string;
 }
