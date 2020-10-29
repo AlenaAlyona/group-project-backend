@@ -4,7 +4,9 @@ import { Request, Response } from "express"
 import * as express from "express"
 import * as bodyParser from "body-parser"
 import { AppRoutes } from "./routes"
+const cors = require("cors")
 
+const corsMiddleWare = cors()
 // const PORT = process.env.PORT || 4000
 
 console.log("from index.ts:")
@@ -18,7 +20,7 @@ createConnection()
     // create express app
     const app = express()
     app.use(bodyParser.json())
-
+    app.use(corsMiddleWare)
     // register all application routes
     AppRoutes.forEach((route) => {
       app[route.method](
@@ -33,8 +35,8 @@ createConnection()
     })
 
     // run app
-    app.listen(3000)
+    app.listen(4000)
 
-    console.log("Express application is up and running on port 3000")
+    console.log("Express application is up and running on port 4000")
   })
   .catch((error) => console.log("TypeORM connection error: ", error))
